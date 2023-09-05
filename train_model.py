@@ -125,7 +125,7 @@ for epoch in tqdm(range(EPOCHS), position=0, leave=True):
     print(f"Train Loss EPOCH {epoch+1}: {train_loss:.4f}")
     print(f"Valid Loss EPOCH {epoch+1}: {val_loss:.4f}")
     print("-"*30)
-torch.save(model.state_dict(), 'model.pt')
+torch.save(model, 'model.pt')
 stop = timeit.default_timer()
 print(f"Training Time: {stop-start:.2f}s")
 
